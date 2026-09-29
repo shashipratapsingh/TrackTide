@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import { AppProviders } from "./app/providers/AppProviders";
 import { AppRoutes } from "./app/routes/AppRoutes";
 import "./styles.css";
+import "./logistics-theme.css";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>

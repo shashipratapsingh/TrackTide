@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # TrackTide Logistics Frontend
 
 A production-style React/Vite frontend structure designed for a future Spring Boot backend.
@@ -122,3 +123,6 @@ Before production release, add:
 - real auth/session strategy
 - observability/error reporting
 - production deployment configuration
+=======
+# TrackTide
+>>>>>>> e678e48f92e3a91c9ea686f053d18567da10c79c
