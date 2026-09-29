@@ -1,0 +1,23 @@
+export const SHIPMENT_STATUS = Object.freeze({
+  CREATED: "CREATED",
+  READY_FOR_DISPATCH: "READY_FOR_DISPATCH",
+  DISPATCHED: "DISPATCHED",
+  IN_TRANSIT: "IN_TRANSIT",
+  RECEIVED_AT_WAREHOUSE: "RECEIVED_AT_WAREHOUSE",
+  DISPATCHED_FROM_WAREHOUSE: "DISPATCHED_FROM_WAREHOUSE",
+  OUT_FOR_DELIVERY: "OUT_FOR_DELIVERY",
+  OTP_PENDING: "OTP_PENDING",
+  DELIVERED: "DELIVERED",
+  DELIVERY_FAILED: "DELIVERY_FAILED",
+  CANCELLED: "CANCELLED",
+  RETURNED: "RETURNED",
+  DAMAGED: "DAMAGED",
+  LOST: "LOST"
+});
+
+export const STATUS_LABELS = Object.fromEntries(
+  Object.entries(SHIPMENT_STATUS).map(([key, value]) => [
+    value,
+    value.replaceAll("_", " ").toLowerCase().replace(/\b\w/g, c => c.toUpperCase())
+  ])
+);
