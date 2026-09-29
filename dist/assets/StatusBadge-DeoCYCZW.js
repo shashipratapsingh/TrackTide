@@ -1,1 +1,0 @@
-import{j as E,S as e}from"./index-CTh7hNTf.js";function r({status:n}){const s=n==="DELIVERED"?"success":n==="DELIVERY_FAILED"||n==="CANCELLED"?"danger":"info";return E.jsx("span",{className:`status status-${s}`,children:e[n]||n})}export{r as S};

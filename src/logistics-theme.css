@@ -13,10 +13,40 @@ body {
 }
 
 .brand-mark {
-  background: #f1813b;
-  color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 5px 14px rgba(241, 129, 59, 0.28);
+  width: 48px;
+  height: 48px;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  flex: 0 0 auto;
+  object-fit: contain;
+}
+
+.brand-copy {
+  min-width: 0;
+}
+
+.brand-wordmark {
+  color: #f4f7f5;
+  white-space: nowrap;
+}
+
+.brand-wordmark strong {
+  color: #f1813b;
+}
+
+.auth-brand .brand-wordmark,
+.public-brand .brand-wordmark {
+  color: #073a6b;
+}
+
+.public-brand .brand-wordmark {
+  font-size: 20px;
+}
+
+.public-brand .brand-mark {
+  width: 54px;
+  height: 54px;
 }
 
 .sidebar nav a {

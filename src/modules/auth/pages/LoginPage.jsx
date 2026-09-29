@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { useAuth } from "../../../context/AuthContext";
 import { ROLES, ROLE_LABELS } from "../../../constants/roles";
 import { defaultRouteForRole } from "../../../utils/accessControl";
+import { BrandLogo } from "../../../components/common/BrandLogo";
 
 export default function LoginPage() {
   const { login } = useAuth();
@@ -20,7 +21,7 @@ export default function LoginPage() {
   }
 
   return <div className="auth-page"><div className="auth-card">
-    <div className="brand auth-brand"><span className="brand-mark">T</span><div><b>TrackTide</b><small>Logistics Platform</small></div></div>
+    <BrandLogo className="brand auth-brand" />
     <h1>Welcome back</h1><p className="muted">Sign in to manage your logistics operations.</p>
     {error && <div className="alert error">{error}</div>}
     <form onSubmit={submit}>
