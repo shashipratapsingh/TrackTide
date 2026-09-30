@@ -10,7 +10,7 @@ export function AuthProvider({ children }) {
     const syncSession = () => setSession(authService.getSession());
     const onUnauthorized = () => setSession(null);
     const handleStorage = (event) => {
-      if (event.key === "tracktide.session" && event.storageArea === sessionStorage) syncSession();
+      if (event.key === "tracktide.session" && event.storageArea === window.sessionStorage) syncSession();
     };
 
     window.addEventListener("auth:unauthorized", onUnauthorized);

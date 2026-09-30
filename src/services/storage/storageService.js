@@ -24,7 +24,7 @@ const normalizeSession = (session) => {
 export const storageService = {
   getSession() {
     try {
-      const session = JSON.parse(sessionStorage.getItem(SESSION_KEY) || "null");
+      const session = JSON.parse(window.sessionStorage.getItem(SESSION_KEY) || "null");
       return normalizeSession(session);
     }
     catch { return null; }
@@ -35,10 +35,10 @@ export const storageService = {
       localStorage.removeItem(SESSION_KEY);
       return;
     }
-    sessionStorage.setItem(SESSION_KEY, JSON.stringify(normalized));
+    window.sessionStorage.setItem(SESSION_KEY, JSON.stringify(normalized));
   },
   clearSession() {
-    sessionStorage.removeItem(SESSION_KEY);
+    window.sessionStorage.removeItem(SESSION_KEY);
   },
   getMockData() {
     try { return JSON.parse(localStorage.getItem(DATA_KEY) || "null"); }
